@@ -154,3 +154,65 @@ export const WhoItWorkData = [
     orangeClass: "top-5 left-0",
   },
 ];
+
+
+// reviews carousel section 
+
+import AvatarImage from "@/assets/pngs/Avatar.png";
+
+export const reviews = [
+  {
+      message: "“Got a few questions after purchasing the product. The owner responded very fast and very helpful. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eos.”",
+      name: "Katherine Moss",
+      role: "Driver",
+      image: AvatarImage,
+  },
+  {
+      message: "“Absolutely love the service. Everything was smooth and professional. Highly recommend! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.”",
+      name: "Daniel Craig",
+      role: "Engineer",
+      image: AvatarImage,
+  },
+  {
+      message: "“The best experience I have had in a while. Customer service was responsive and polite. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, saepe.”",
+      name: "Samantha Lee",
+      role: "Designer",
+      image: AvatarImage,
+  },
+  {
+      message: "“Got a few questions after purchasing the product. The owner responded very fast and very helpful. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eos.”",
+      name: "Katherine Moss",
+      role: "Driver",
+      image: AvatarImage,
+  },
+  {
+      message: "“Absolutely love the service. Everything was smooth and professional. Highly recommend! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.”",
+      name: "Daniel Craig",
+      role: "Engineer",
+      image: AvatarImage,
+  },
+  {
+      message: "“The best experience I have had in a while. Customer service was responsive and polite. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, saepe.”",
+      name: "Samantha Lee",
+      role: "Designer",
+      image: AvatarImage,
+  },
+  {
+      message: "“Got a few questions after purchasing the product. The owner responded very fast and very helpful. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eos.”",
+      name: "Katherine Moss",
+      role: "Driver",
+      image: AvatarImage,
+  },
+  {
+      message: "“Absolutely love the service. Everything was smooth and professional. Highly recommend! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.”",
+      name: "Daniel Craig",
+      role: "Engineer",
+      image: AvatarImage,
+  },
+  {
+      message: "“The best experience I have had in a while. Customer service was responsive and polite. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, saepe.”",
+      name: "Samantha Lee",
+      role: "Designer",
+      image: AvatarImage,
+  },
+];
