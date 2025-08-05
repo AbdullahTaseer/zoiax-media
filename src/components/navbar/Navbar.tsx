@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
 
         <GlobalButton
-          onClick={() => router.push("/login")}
+          onClick={() => router.push("/register")}
           title="Log in"
           width="80px"
           bgColor="transparent"

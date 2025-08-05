@@ -41,7 +41,7 @@ const NavbarDrawer = () => {
             </h1>
           </div>
           <GlobalButton
-            onClick={() => router.push("/login")}
+            onClick={() => router.push("/register")}
             title="Log in"
             width="80px"
             bgColor="transparent"
@@ -102,7 +102,6 @@ const NavbarDrawer = () => {
         </div>
       </div>
 
-      {/* Backdrop overlay */}
       {isDrawerOpen && (
         <div
           className="fixed z-[110] inset-0 bg-black opacity-50"
