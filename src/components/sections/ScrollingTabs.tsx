@@ -10,11 +10,7 @@ import TabBtnImg2 from "@/assets/pngs/tab-btn-img-2.png";
 import TabBtnImg3 from "@/assets/pngs/tab-btn-img-3.png";
 import TabBtnImg4 from "@/assets/pngs/tab-btn-img-4.png";
 
-type ScrollingTabsProps = {
-  handleOpen?: () => void;
-}
-
-const ScrollingTabs = ({ handleOpen }: ScrollingTabsProps) => {
+const ScrollingTabs = () => {
   const tabs = ["Tab 1", "Tab 2", "Tab 3", "Tab 4"];
   const tabBtnImages = [TabBtnImg1, TabBtnImg2, TabBtnImg3, TabBtnImg4];
   const [activeTab, setActiveTab] = useState(0);
@@ -57,7 +53,7 @@ const ScrollingTabs = ({ handleOpen }: ScrollingTabsProps) => {
   return (
     <div ref={containerRef} className="h-[5000px] relative w-screen">
       <div className="sticky top-0 z-[1030] w-full h-screen">
-        <div className="absolute z-[1020] flex flex-col gap-4 justify-center items-end h-screen right-0 pr-[50px] max-[768px]:flex-row max-[768px]:justify-center max-[768px]:items-end max-[768px]:h-[20vh] max-[768px]:w-full max-[768px]:bottom-0 max-[768px]:pb-10">
+        <div className="absolute z-[1020] flex overflow-scroll flex-col gap-4 justify-center items-end h-screen right-0 px-[50px] max-[1024px]:px-0 max-[1024px]:flex-row max-[1024px]:justify-center max-[1024px]:items-end max-[1024px]:h-[20vh] max-[1024px]:w-full max-[1024px]:bottom-0 max-[1024px]:pb-10">
             {AnimatedtabData.map((tab, index) => (
               <div
                 key={index}
@@ -69,7 +65,7 @@ const ScrollingTabs = ({ handleOpen }: ScrollingTabsProps) => {
                     setActiveTab(index);
                   }
                 }}
-                className={`w-[80px] relative h-[50px] rounded-lg cursor-pointer transition-transform duration-300 ease-in-out overflow-hidden
+                className={`w-[80px] max-[600px]:w-[60px] relative h-[50px] max-[600px]:h-[40px] rounded-lg cursor-pointer transition-transform duration-300 ease-in-out overflow-hidden
                 ${activeTab === index ? "border-2 border-[#FE7151] scale-110" : "border border-white"}`}
               >
                 <Image 
@@ -110,14 +106,14 @@ const ScrollingTabs = ({ handleOpen }: ScrollingTabsProps) => {
                   <p className="paragraph text-white max-w-xl mx-auto text-base whitespace-pre-wrap">
                     {tab.description}
                   </p>
-                  {tab.heading === "Karhive for ambassadors" && (
+                  {/* {tab.heading === "Karhive for ambassadors" && (
                     <button
                       onClick={handleOpen}
                       className="mt-10 bg-[#FE7151] hover:bg-[#E65A3C] text-white px-4 py-2 rounded"
                     >
                       Join as a Ambassador Chauffeur
                     </button>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

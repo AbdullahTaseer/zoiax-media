@@ -6,12 +6,12 @@ export const AnimatedtabData = [
   {
     img: TabimgOne,
     heading: " About Karhive",
-    description: "Karhive is a professional New Jersey ground transportation company which provides the most reliable and flawless ground transportation services. Our dedication and professional approach is a guarantee for a luxurious, safe and affordable company you can always count on. We offer a great choice of services that are ideal for every special occasion. Our special offers can be combined to create the perfect transportation service suitable for anniversaries, prom nights, business and corporate events, family trips, or just about anything else you can think of.",
+    description: "Karhive is a professional New Jersey ground transportation company which provides the most reliable and flawless ground transportation services. Our dedication and professional approach is a guarantee for a luxurious, safe and affordable company you can always count on. We offer a great choice of services that are ideal for every special occasion. Our special offers can be combined to create the perfect transportation service suitable for anniversaries.",
   },
   {
     img: TabimgOne,
     heading: "Karhive for chauffeur",
-    description: "When you need a safe way to get around the city, think Karhive Chauffeur. You can book the top-quality service you know and love for immediate pickup in the cities listed below. The perfect combination of traditional car service and ride hailing, chauffeur hailing is now available in the new version of the Blacklane app for iOS and Android.",
+    description: "When you need a safe way to get around the city, think Karhive Chauffeur. You can book the top-quality service you know and love for immediate pickup in the cities listed below. The perfect combination of traditional car service and ride hailing.",
   },
   {
     img: TabimgOne,
