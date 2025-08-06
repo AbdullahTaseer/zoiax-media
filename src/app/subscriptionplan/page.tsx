@@ -57,7 +57,7 @@ const Subscriptionplan = () => {
       <div className="py-4 px-[5%] max-[768px]:px-4">
         <p className="font-bold text-3xl">Unlock Passive Income</p>
         <p>Choose a plan that suits you and start earning passive income.</p>
-        <div className="grid md:grid-cols-3 gap-6 mx-auto mt-10">
+        <div className="grid grid-cols-3 max-[950px]:grid-cols-2 max-[600px]:grid-cols-1 gap-6 mx-auto mt-10">
           {plans.map((plan) => (
             <PlanCard
               key={plan.plan_id}
