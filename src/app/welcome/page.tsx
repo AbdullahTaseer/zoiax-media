@@ -20,7 +20,7 @@ const Welcome = () => {
               Welcome to Zoiax Media
             </h1>
             <p className="text-gray-600 text-base sm:text-lg">
-              We're excited to have you here!
+              We&#39;re excited to have you here!
             </p>
           </div>
 
@@ -35,16 +35,16 @@ const Welcome = () => {
             </div>
           </div>
 
-            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-6 sm:mt-8 text-center">
-              Thank you for choosing Zoiax Media. We're here to help you grow your restaurant business with innovative marketing solutions and influencer partnerships.
-            </p>
+          <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-6 sm:mt-8 text-center">
+            Thank you for choosing Zoiax Media. We&#39;re here to help you grow your restaurant business with innovative marketing solutions and influencer partnerships.
+          </p>
 
           <div className="mt-6 sm:mt-8">
             <GlobalButton title="Continue" height="40px" onClick={() => router.push('/login')} />
           </div>
 
         </div>
-        
+
       </div>
 
     </div>
