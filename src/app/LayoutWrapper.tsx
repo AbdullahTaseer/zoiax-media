@@ -9,7 +9,7 @@ import NavbarDrawer from "@/components/navbar/NavbarDrawer";
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
 
   const pathname = usePathname();
-  const hideLayout = ["/register", "/thankYou", "/subscriptionplan"].includes(pathname);
+  const hideLayout = ["/register", "/thankYou", "/subscriptionplan", "/login", "/welcome"].includes(pathname);
 
   return (
     <>
