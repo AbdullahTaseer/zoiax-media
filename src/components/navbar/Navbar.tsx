@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
 
         <AnimatedButton
-          onClick={() => router.push("/login")}
+          onClick={() => router.push("/register")}
           title="Log in"
           width="120px"
           height="42px"
