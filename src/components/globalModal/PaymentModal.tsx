@@ -1,5 +1,5 @@
 import React from 'react'
-import GlobalButton from '../globalButton/GlobalButton';
+import AnimatedButton from '../buttons/AnimatedButton';
 
 const PaymentModal = ({ cancelClick }: { cancelClick: () => void }) => {
   return (
@@ -20,9 +20,9 @@ const PaymentModal = ({ cancelClick }: { cancelClick: () => void }) => {
         <p className='pb-1 text-sm'>CVC *</p>
         <input type='text' placeholder='Name' className='w-full outline-0 px-3 py-[6px] border bg-white border-[#012641] rounded-[5px]' />
       </div>
-      <div className="flex flex-wrap justify-end gap-4 mt-4">
-        <GlobalButton onClick={cancelClick} title='Cancel' height='40px' width='80px' color="#012641" bgColor='white' borderColor='#012641' borderWidth='1px' />
-        <GlobalButton title='Submit Payment' height='40px' width='140px' />
+      <div className="flex justify-end gap-4 mt-4">
+        <AnimatedButton onClick={cancelClick} title='Cancel' height='44px' width='90px' />
+        <AnimatedButton title='Submit Payment' height='44px' width='150px' />
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { PlayCircle } from 'lucide-react'
 import ThanksImg from "@/assets/pngs/Thanks.png";
-import GlobalButton from '@/components/globalButton/GlobalButton';
+import AnimatedButton from '@/components/buttons/AnimatedButton';
 
 const ThanksScreen = () => {
 
@@ -40,8 +40,8 @@ const ThanksScreen = () => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <GlobalButton onClick={() => router.push("/register")} title='Maybe Later' height='40px' width='170px' />
-          <GlobalButton onClick={() => router.push("/subscriptionplan")} title='Unlock Passive Income' height='40px' width='170px' />
+          <AnimatedButton onClick={() => router.push("/register")} title='Maybe Later' height='44px' width='170px' />
+          <AnimatedButton onClick={() => router.push("/subscriptionplan")} title='Unlock Passive Income' height='44px' width='170px' />
         </div>
       </div>
     </div>

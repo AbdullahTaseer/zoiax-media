@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 import GoogleIcon from "@/assets/svgs/google-icon.png";
 import FacebookIcon from '@/assets/svgs/facebook-svg.svg';
-import GlobalButton from '@/components/globalButton/GlobalButton';
+import AnimatedButton from '@/components/buttons/AnimatedButton';
 
 const Login = () => {
 
@@ -46,7 +46,7 @@ const Login = () => {
               </div>
             </div>
 
-            <GlobalButton onClick={() => router.push("/welcome")} title="Sign In" height="40px" font="600" />
+            <AnimatedButton onClick={() => router.push("/welcome")} title="Sign In" height="44px" />
 
             <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">

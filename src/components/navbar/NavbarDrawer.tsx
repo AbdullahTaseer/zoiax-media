@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import GlobalButton from "../globalButton/GlobalButton";
+import AnimatedButton from "../buttons/AnimatedButton";
 
 const NavbarDrawer = () => {
   const router = useRouter();
@@ -40,15 +40,11 @@ const NavbarDrawer = () => {
               Zoiax Media
             </h1>
           </div>
-          <GlobalButton
+          <AnimatedButton
             onClick={() => router.push("/login")}
             title="Log in"
-            width="80px"
-            bgColor="transparent"
-            borderColor="#012641"
-            borderWidth="1px"
-            color="#012641"
-            height="35px"
+            width="110px"
+            height="42px"
           />
         </div>
 

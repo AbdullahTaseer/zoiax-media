@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import GlobalButton from "../globalButton/GlobalButton";
+import AnimatedButton from "../buttons/AnimatedButton";
 
 const Navbar = () => {
   const router = useRouter();
@@ -45,15 +45,11 @@ const Navbar = () => {
           ))}
         </div>
 
-        <GlobalButton
+        <AnimatedButton
           onClick={() => router.push("/login")}
           title="Log in"
-          width="80px"
-          bgColor="transparent"
-          borderColor="#012641"
-          borderWidth="1px"
-          color="#012641"
-          height="35px"
+          width="120px"
+          height="42px"
         />
       </div>
 
