@@ -43,7 +43,7 @@ const NavbarDrawer = () => {
           <AnimatedButton
             onClick={() => router.push("/register")}
             title="Sign Up"
-            width="110px"
+            width="100px"
             height="42px"
           />
         </div>

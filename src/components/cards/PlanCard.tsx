@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import AnimatedButton from '../buttons/AnimatedButton'
+import GlobalButton from '../buttons/GlobalButton'
 
 type Plan = {
   plan_id: number
@@ -63,10 +63,10 @@ const PlanCard = ({ plan, isSelected, onClick, onSubscribe }: PlanCardProps) => 
       )}
 
       {isSelected && (
-        <AnimatedButton
+        <GlobalButton
           title="Subscribe"
           width="100%"
-          height="42px"
+          height="40px"
           className="mt-5"
           onClick={(e) => {
             e.stopPropagation()

@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import AnimatedButton from '../buttons/AnimatedButton';
+import GlobalButton from '../buttons/GlobalButton';
 
 const BecomeAmbassador = () => {
   return (
@@ -47,7 +47,7 @@ const BecomeAmbassador = () => {
           </Select>
         </div>
       </div>
-      <AnimatedButton title='Submit' width='200px' height='40px' className='mx-auto mt-10' />
+      <GlobalButton title='Submit' width='200px' height='40px' className='mx-auto mt-10' />
     </div>
   );
 };

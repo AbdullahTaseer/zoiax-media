@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import AnimatedButton from '@/components/buttons/AnimatedButton';
+import GlobalButton from '@/components/buttons/GlobalButton';
 
 const Welcome = () => {
 
@@ -40,7 +40,7 @@ const Welcome = () => {
           </p>
 
           <div className="mt-6 sm:mt-8">
-            <AnimatedButton title="Continue" height="40px" onClick={() => router.push('/login')} />
+            <GlobalButton title="Continue" height="40px" onClick={() => router.push('/login')} />
           </div>
 
         </div>

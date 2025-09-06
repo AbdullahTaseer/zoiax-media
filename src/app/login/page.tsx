@@ -4,10 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import GlobalButton from '@/components/buttons/GlobalButton';
 
 import GoogleIcon from "@/assets/svgs/google-icon.png";
 import FacebookIcon from '@/assets/svgs/facebook-svg.svg';
-import AnimatedButton from '@/components/buttons/AnimatedButton';
 
 const Login = () => {
 
@@ -46,7 +46,7 @@ const Login = () => {
               </div>
             </div>
 
-            <AnimatedButton onClick={() => router.push("/welcome")} title="Sign In" height="44px" />
+            <GlobalButton onClick={() => router.push("/welcome")} title="Sign In" height="40px" font="600" />
 
             <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
