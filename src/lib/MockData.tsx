@@ -130,28 +130,19 @@ import Icon_4 from "@/assets/svgs/who-it-work-icon-4.svg";
 
 export const WhoItWorkData = [
   {
-    title: "Find a celebrity",
-    desc: "Browse thousands of stars offering personalized videos.",
+    title: "Submit Your Inquiry",
+    desc: "Tell us your goals we handle the rest.",
     icon: Icon_1,
-    orangeClass: "top-0 left-8",
   },
   {
-    title: "Tell them what to say",
-    desc: "At checkout, provide details for the perfect personalized video.",
+    title: "Get a Tailored Plan",
+    desc: "We recommend the ideal influencer + services for your budget.",
     icon: Icon_2,
-    orangeClass: "bottom-0 right-4",
   },
   {
-    title: "Get your video",
-    desc: "Browse thousands of stars offering personalized videos.",
+    title: "Approve. Relax. Grow.",
+    desc: "We manage everything; you enjoy real results.",
     icon: Icon_3,
-    orangeClass: "bottom-4 left-1/2 -translate-x-1/2",
-  },
-  {
-    title: "Share with loved ones",
-    desc: "Browse thousands of stars offering personalized videos.",
-    icon: Icon_4,
-    orangeClass: "top-5 left-0",
   },
 ];
 

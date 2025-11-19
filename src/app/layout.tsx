@@ -1,14 +1,7 @@
 
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "./LayoutWrapper";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-nunito",
-});
 
 export const metadata: Metadata = {
   title: "Zoiax Media",
@@ -18,7 +11,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} font-nunito antialiased`}>
+      <body>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

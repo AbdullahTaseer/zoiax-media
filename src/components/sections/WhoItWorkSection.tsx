@@ -4,28 +4,28 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 import OrangeShade from "@/assets/svgs/who-it-work-orange-shade.svg";
 import { WhoItWorkData } from '@/lib/MockData';
+import GlobalButton from '../buttons/GlobalButton';
 
 type CardProps = {
   title: string;
   desc: string;
   icon: string | StaticImport
-  orangeClass: string;
 };
 
-const Card = ({ title, desc, icon, orangeClass }: CardProps) => {
+const Card = ({ title, desc, icon }: CardProps) => {
   return (
-    <div className="relative border border-[#CED5DB] rounded-[12px] p-5 overflow-hidden bg-white">
-      <Image
+    <div className="relative text-center border border-[#CED5DB] rounded-[12px] p-5 overflow-hidden bg-white">
+      {/* <Image
         src={OrangeShade}
         alt=""
         fill
         className={`absolute ${orangeClass} z-0`}
-      />
-      <div className="bg-[#012641] z-10 relative h-[55px] w-[55px] rounded-full flex justify-center items-center mb-4">
+      /> */}
+      <div className="bg-gradient-to-b from-[#9833DF] to-[#D7287BB2] h-[55px] w-[55px] rounded-full flex justify-center mx-auto items-center mb-4">
         <Image src={icon} alt="" />
       </div>
-      <p className="font-bold text-[#012641] relative z-10">{title}</p>
-      <p className="text-sm text-[#4A4A4A] relative z-10">{desc}</p>
+      <p className="font-bold text-[24px] text-[#012641]">{title}</p>
+      <p className="text-[#4A4A4A] mt-3">{desc}</p>
     </div>
   );
 };
@@ -33,23 +33,23 @@ const Card = ({ title, desc, icon, orangeClass }: CardProps) => {
 const WhoItWorkSection = () => {
   return (
     <div className="py-16 px-[5%] max-md:px-4 bg-white">
-      <h1 className="text-4xl max-md:text-2xl font-bold text-center text-[#012641] mb-4">
-        Who it work
+      <h1 className="text-[50px] max-md:text-4xl font-bold text-center text-[#012641]">
+        How It Works
       </h1>
-      <p className="text-center max-w-xl mx-auto text-sm text-black mb-10">
-        At Zoiax, we provide you with a gateway to a diverse range of services, including e-commerce, travel, property, food delivery, and more.
-      </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         {WhoItWorkData.map((item, idx) => (
           <Card
             key={idx}
             title={item.title}
             desc={item.desc}
             icon={item.icon}
-            orangeClass={item.orangeClass}
           />
         ))}
+      </div>
+      <div className='flex items-center justify-center gap-4 sm:gap-6 mt-10'>
+        <GlobalButton title='Inquire Now' className='w-[140px] h-[46px]' />
+        <GlobalButton title='Fill Out My Business Profile' bgColor='white' color='#012641' borderColor='#CFCFCF' borderWidth='1px' className='w-[270px] h-[46px]' />
       </div>
     </div>
   );

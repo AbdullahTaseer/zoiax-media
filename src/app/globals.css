@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-2');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -116,47 +117,62 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  
-  .font-nunito {
+
+  /* .font-nunito {
     font-family: var(--font-nunito), 'Nunito', sans-serif;
-  }
+  } */
+}
+
+:root {
+  --font-helvetica-neue: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-family: var(--font-helvetica-neue);
 }
 
 .nav-first-shadow {
-  box-shadow: 1px 9px 6px 0px rgba(54,166,181,0.84);
-  -webkit-box-shadow: 1px 9px 6px 0px rgba(54,166,181,0.84);
-  -moz-box-shadow: 1px 9px 6px 0px rgba(54,166,181,0.84);
+  box-shadow: 1px 9px 6px 0px rgba(54, 166, 181, 0.84);
+  -webkit-box-shadow: 1px 9px 6px 0px rgba(54, 166, 181, 0.84);
+  -moz-box-shadow: 1px 9px 6px 0px rgba(54, 166, 181, 0.84);
   height: 10px;
 }
 
-.nav-second-shadow  {
-  box-shadow: 1px 9px 6px 0px rgba(90,92,94,0.84);
-  -webkit-box-shadow: 1px 9px 6px 0px rgba(90,92,94,0.84);
-  -moz-box-shadow: 1px 9px 6px 0px rgba(90,92,94,0.84);
+.nav-second-shadow {
+  box-shadow: 1px 9px 6px 0px rgba(90, 92, 94, 0.84);
+  -webkit-box-shadow: 1px 9px 6px 0px rgba(90, 92, 94, 0.84);
+  -moz-box-shadow: 1px 9px 6px 0px rgba(90, 92, 94, 0.84);
   height: 10px
 }
 
 .nav-third-shadow {
-  box-shadow: 1px 9px 6px 0px rgba(214,146,79,0.84);
--webkit-box-shadow: 1px 9px 6px 0px rgba(214,146,79,0.84);
--moz-box-shadow: 1px 9px 6px 0px rgba(214,146,79,0.84);
+  box-shadow: 1px 9px 6px 0px rgba(214, 146, 79, 0.84);
+  -webkit-box-shadow: 1px 9px 6px 0px rgba(214, 146, 79, 0.84);
+  -moz-box-shadow: 1px 9px 6px 0px rgba(214, 146, 79, 0.84);
   height: 10px;
 }
 
 /* Hide scrollbar for horizontal scroll */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-  scrollbar-color: transparent transparent;  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  scrollbar-color: transparent transparent;
+  /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  display: none;
+  /* Safari and Chrome */
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }
 
 .scrollbar-hide::-webkit-scrollbar-track {
@@ -171,10 +187,13 @@
 /* animated button  */
 
 @keyframes pulseStar {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0;
     transform: scale(0.2);
   }
+
   50% {
     opacity: 1;
     transform: scale(1);

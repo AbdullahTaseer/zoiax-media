@@ -1,7 +1,9 @@
 'use client';
 import React, { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import AnimatedButton from "../buttons/AnimatedButton";
+import LogoImg from "@/assets/svgs/Xaioz Media.svg";
 
 const NavbarDrawer = () => {
   const router = useRouter();
@@ -11,16 +13,16 @@ const NavbarDrawer = () => {
   const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
 
   const navItems = [
-    { title: "Influencers", index: 0, route: "/influencers" },
-    { title: "Marketing", index: 1, route: "/marketing" },
-    { title: "Ambassadors", index: 2, route: "/ambassadors" },
-    { title: "Menu Optimization", index: 3, route: "/menu-optimization" },
-    { title: "Contact", index: 4, route: "/contact" },
+    { title: "For business", index: 0, route: "/" },
+    { title: "For Influencers", index: 1, route: "/" },
+    { title: "Services", index: 2, route: "/" },
+    { title: "Ambassadors", index: 3, route: "/" },
+    { title: "Contact", index: 4, route: "/" },
   ];
 
   return (
     <>
-      <div className="sticky top-0 z-[9998] hidden max-[1024px]:block">
+      <div className="sticky top-0 z-[9997] hidden max-[1024px]:block">
         <div className="flex justify-between items-center px-[5%] max-[768px]:px-4 pt-3 bg-white w-full">
           <div className="flex items-center gap-3">
             <svg
@@ -32,18 +34,16 @@ const NavbarDrawer = () => {
               viewBox="0 0 24 24"
             >
               <path
-                fill="#012641"
+                fill="black"
                 d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"
               />
             </svg>
-            <h1 className="text-[#012641] text-[24px] font-[800] whitespace-nowrap">
-              Zoiax Media
-            </h1>
+            <Image src={LogoImg} alt="" />
           </div>
           <AnimatedButton
             onClick={() => router.push("/register")}
-            title="Sign Up"
-            width="100px"
+            title="Book a Strategy Call"
+            width="180px"
             height="42px"
           />
         </div>
@@ -59,10 +59,8 @@ const NavbarDrawer = () => {
         className={`fixed top-0 z-[9999] h-screen overflow-y-auto border-r bg-white w-[240px] dark:bg-white transition-all duration-500 ${isDrawerOpen ? "left-0" : "-left-[250px]"
           }`}
       >
-        <div className="flex justify-between items-center px-4 py-3">
-        <h1 className="text-[#012641] text-[24px] font-[800] whitespace-nowrap">
-          Zoiax Media
-        </h1>
+        <div className="flex justify-between items-center px-4 py-6">
+          <Image src={LogoImg} alt="" />
           <svg
             onClick={toggleDrawer}
             className="cursor-pointer"
@@ -78,7 +76,7 @@ const NavbarDrawer = () => {
           </svg>
         </div>
 
-        <div className="text-black font-bold text-[15px] max-[768px]:text-[14px] max-[425px]:text-[13px] px-4 space-y-2">
+        <div className="text-black font-bold text-[15px] max-[768px]:text-[14px] max-[425px]:text-[13px] px-4 mt-1 space-y-2">
           {navItems.map((item) => (
             <p
               key={item.index}
@@ -100,7 +98,7 @@ const NavbarDrawer = () => {
 
       {isDrawerOpen && (
         <div
-          className="fixed z-[110] inset-0 bg-black opacity-50"
+          className="fixed z-[9998] inset-0 bg-black opacity-50"
           onClick={toggleDrawer}
         />
       )}

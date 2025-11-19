@@ -35,7 +35,7 @@ const GlobalButton = ({
   icon,
   font = "600",
   color = "white",
-  borderRadius = '7px',
+  borderRadius = '12px',
   bgColor = "#012641",
   onClick,
 }: Props) => {

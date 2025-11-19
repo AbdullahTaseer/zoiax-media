@@ -1,27 +1,27 @@
 'use client';
 
+import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import AnimatedButton from "../buttons/AnimatedButton";
+import LogoImg from "@/assets/svgs/Xaioz Media.svg";
 
 const Navbar = () => {
   const router = useRouter();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const navItems = [
-    { title: "Influencers", index: 0 },
-    { title: "Marketing", index: 1 },
-    { title: "Ambassadors", index: 2 },
-    { title: "Menu Optimization", index: 3 },
+    { title: "For business", index: 0 },
+    { title: "For Influencers", index: 1 },
+    { title: "Services", index: 2 },
+    { title: "Ambassadors", index: 3 },
     { title: "Contact", index: 4 },
   ];
 
   return (
     <div className="sticky top-0 z-[9999] max-[1024px]:hidden">
       <div className="flex justify-between items-center px-[5%] max-[768px]:px-4 pt-3 bg-white w-full">
-        <h1 className="text-[#012641] text-[24px] font-[800] whitespace-nowrap">
-          Zoiax Media
-        </h1>
+        <Image src={LogoImg} alt="" />
 
         <div className="flex gap-7 items-center whitespace-nowrap text-center text-[#696969] text-[15px] font-medium">
           {navItems.map((item) => (
@@ -47,8 +47,8 @@ const Navbar = () => {
 
         <AnimatedButton
           onClick={() => router.push("/register")}
-          title="Sign Up"
-          width="120px"
+          title="Book a Strategy Call"
+          width="180px"
           height="42px"
         />
       </div>
