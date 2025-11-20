@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from "next/image";
-import MarketingImg from "@/assets/pngs/marketing-img.png";
-import ShadeImg from "@/assets/svgs/markrting-shade.svg";
 import TitleCard from "@/components/cards/TitleCard";
+import ShadeImg from "@/assets/svgs/markrting-shade.svg";
+import MarketingImg from "@/assets/pngs/marketing-img.png";
 
 const MarketingChangedSection = () => {
   return (
