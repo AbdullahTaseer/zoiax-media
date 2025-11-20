@@ -36,7 +36,7 @@ const GlobalButton = ({
   font = "400",
   color = "white",
   borderRadius = '12px',
-  bgColor = "#012641",
+  bgColor = "black",
   onClick,
 }: Props) => {
   const hoverBgColor = hover?.bgColor || "backgroundColor";

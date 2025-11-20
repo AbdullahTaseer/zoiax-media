@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import LogoImg from "@/assets/svgs/Xaioz Media.svg";
 import GlobalButton from "../buttons/GlobalButton";
+import leftShadowImg from "@/assets/svgs/navbar-left.svg";
+import rightShadowImg from "@/assets/svgs/navbar-right.svg";
 
 const NavbarDrawer = () => {
   const router = useRouter();
@@ -22,7 +24,7 @@ const NavbarDrawer = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-[1000] hidden max-[1024px]:block">
+      <div className="sticky top-0 z-[1000] hidden max-[1024px]:block overflow-clip bg-white h-[70px]">
         <div className="flex justify-between items-center px-[5%] max-[768px]:px-4 pt-3 bg-white w-full">
           <div className="flex items-center gap-3 max-[350px]:gap-1">
             <svg
@@ -47,16 +49,16 @@ const NavbarDrawer = () => {
             color="#012641"
             borderColor="#012641"
             borderWidth="1px"
-            hover={{ bgColor: "#012641", color: "white" }}
+            hover={{ bgColor: "black", color: "white" }}
             className="w-[180px] h-[42px] max-[475px]:w-[140px] max-[350px]:w-[128px]"
           />
         </div>
 
-        <div className="grid grid-cols-2 w-full bg-white h-[10px] relative">
-          <div className="absolute left-0 inset-0 w-full bg-white h-[10px]" />
-          <div className="nav-first-shadow" />
-          <div className="nav-third-shadow" />
+        <div className="grid grid-cols-2">
+          <Image src={leftShadowImg} alt="img" />
+          <Image src={rightShadowImg} alt="img" />
         </div>
+
       </div>
 
       <div

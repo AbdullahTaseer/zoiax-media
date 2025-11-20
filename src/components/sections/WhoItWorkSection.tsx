@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-
-import OrangeShade from "@/assets/svgs/who-it-work-orange-shade.svg";
 import { WhoItWorkData } from '@/lib/MockData';
 import GlobalButton from '../buttons/GlobalButton';
 import TitleCard from '../cards/TitleCard';
@@ -15,13 +13,7 @@ type CardProps = {
 
 const Card = ({ title, desc, icon }: CardProps) => {
   return (
-    <div className="relative text-center border border-[#CED5DB] rounded-[12px] p-5 overflow-hidden bg-white">
-      {/* <Image
-        src={OrangeShade}
-        alt=""
-        fill
-        className={`absolute ${orangeClass} z-0`}
-      /> */}
+    <div className="relative max-[768px]:w-[280px] shrink-0 text-center border border-[#CED5DB] rounded-[12px] px-5 py-10 max-[768px]:py-6 overflow-hidden bg-white">
       <div className="bg-gradient-to-b from-[#9833DF] to-[#D7287BB2] h-[55px] w-[55px] rounded-full flex justify-center mx-auto items-center mb-4">
         <Image src={icon} alt="" />
       </div>
@@ -37,7 +29,7 @@ const WhoItWorkSection = () => {
 
       <TitleCard title='How It Works' />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div className="grid max-[768px]:flex max-[768px]:overflow-x-auto scrollbar-hide grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {WhoItWorkData.map((item, idx) => (
           <Card
             key={idx}

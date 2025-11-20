@@ -57,7 +57,7 @@ const GlobalModal = ({
         <div className="py-3 px-5 bg-white flex items-center gap-4 justify-between rounded-t-[8px]">
           <div/>
           <div className="flex items-center gap-4">
-            <h3 className="text-[#1a1d26] text-[32px] max-[900px]:text-[18px] max-[500px]:text-[16px] tracking-normal">
+            <h3 className="text-[#1a1d26] text-[32px] max-[900px]:text-[22px] max-[500px]:text-[16px] tracking-normal">
               {title}
             </h3>
           </div>
