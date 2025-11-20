@@ -22,6 +22,7 @@ const imagesRow3 = [HeroImg_6, HeroImg_4, HeroImg_2, HeroImg_3, HeroImg_1, HeroI
 const HeroSection = () => {
   const [openInquiryForm, setIsOpenInquiryForm] = useState(false);
   const [openInfluencerForm, setIsOpenInfluencerForm] = useState(false);
+  const [videoOpen, setIsVideoOpen] = useState(false);
 
 
   return (
@@ -50,6 +51,7 @@ const HeroSection = () => {
 
           <Image
             src={PlayIcon}
+            onClick={() => setIsVideoOpen(true)}
             alt="Play"
             className='cursor-pointer hover:opacity-80 hover:scale-105 duration-200' />
         </div>
@@ -61,7 +63,7 @@ const HeroSection = () => {
           <div
             key={idx}
             className={`flex gap-4 rounded-[16px] overflow-x-scroll scrollbar-hide relative ${idx === 0 || idx === 2 ? 'pl-10' : ''}`}
-            // style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+          // style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
           >
             {[...row, ...row].map((img, i) => (
               <Image key={i} src={img} alt="Hero" className="shrink-0 w-[250px] max-[1100px]:w-[200px] max-[700px]:w-[150px]" />
@@ -86,6 +88,29 @@ const HeroSection = () => {
       >
         <InfluencerApplicationForm />
       </GlobalModal>
+      <GlobalModal
+        modalHeader={false}
+        isOpen={videoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        className="!p-0 w-[70vw] max-[500px]:w-[87vw] rounded-2xl h-[70vh]"
+      >
+        {videoOpen && (
+          <div className="w-full h-full overflow-hidden rounded-xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&modestbranding=1&showinfo=0"
+              title="YouTube video"
+              allow="autoplay; encrypted-media; fullscreen"
+              allowFullScreen
+              style={{ border: "none" }}
+              className='object-cover'
+            />
+          </div>
+        )}
+      </GlobalModal>
+
+
     </div>
   );
 };
