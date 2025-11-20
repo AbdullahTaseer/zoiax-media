@@ -11,6 +11,8 @@ import HeroImg_3 from "@/assets/pngs/hero-img-3.png";
 import HeroImg_4 from "@/assets/pngs/hero-img-4.png";
 import HeroImg_5 from "@/assets/pngs/hero-img-5.png";
 import HeroImg_6 from "@/assets/pngs/hero-img-6.png";
+import GlobalModal from '../globalModal/GlobalModal';
+import BusinessInquiryForm from '../globalModal/BusinessInquiryForm';
 
 const imagesRow1 = [HeroImg_1, HeroImg_2, HeroImg_3, HeroImg_4, HeroImg_5, HeroImg_6];
 const imagesRow2 = [HeroImg_2, HeroImg_4, HeroImg_5, HeroImg_1, HeroImg_3, HeroImg_6];
@@ -18,6 +20,7 @@ const imagesRow3 = [HeroImg_6, HeroImg_4, HeroImg_2, HeroImg_3, HeroImg_1, HeroI
 
 const HeroSection = () => {
   const [isScrolling, setIsScrolling] = useState(false);
+  const [openInquiryForm, setIsOpenInquiryForm] = useState(false);
 
   const rowRefs = [
     useRef<HTMLDivElement | null>(null),
@@ -74,7 +77,7 @@ const HeroSection = () => {
         </p>
 
         <div className="flex items-center max-[500px]:flex-col gap-4 sm:gap-6 mt-10">
-          <GlobalButton title="Inquire About Services" className="w-[240px] max-[500px]:w-[260px] h-[46px]" />
+          <GlobalButton onClick={() => setIsOpenInquiryForm(true)} title="Inquire About Services" className="w-[240px] max-[500px]:w-[260px] h-[46px]" />
           <GlobalButton
             title="Preview Influencers"
             bgColor="white"
@@ -109,6 +112,15 @@ const HeroSection = () => {
           </div>
         ))}
       </div>
+
+      <GlobalModal
+        title='Business Inquiry Form'
+        isOpen={openInquiryForm}
+        onClose={() => setIsOpenInquiryForm(false)}
+        className='w-[70vw]'
+      >
+        <BusinessInquiryForm />
+      </GlobalModal>
     </div>
   );
 };

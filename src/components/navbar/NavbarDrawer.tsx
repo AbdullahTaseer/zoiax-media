@@ -22,7 +22,7 @@ const NavbarDrawer = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-[9997] hidden max-[1024px]:block">
+      <div className="sticky top-0 z-[1000] hidden max-[1024px]:block">
         <div className="flex justify-between items-center px-[5%] max-[768px]:px-4 pt-3 bg-white w-full">
           <div className="flex items-center gap-3 max-[350px]:gap-1">
             <svg
@@ -60,7 +60,7 @@ const NavbarDrawer = () => {
       </div>
 
       <div
-        className={`fixed top-0 z-[9999] h-screen overflow-y-auto border-r bg-white w-[240px] dark:bg-white transition-all duration-500 ${isDrawerOpen ? "left-0" : "-left-[250px]"
+        className={`fixed top-0 z-[1010] h-screen overflow-y-auto border-r bg-white w-[240px] dark:bg-white transition-all duration-500 ${isDrawerOpen ? "left-0" : "-left-[250px]"
           }`}
       >
         <div className="flex justify-between items-center px-4 py-6">
@@ -102,7 +102,7 @@ const NavbarDrawer = () => {
 
       {isDrawerOpen && (
         <div
-          className="fixed z-[9998] inset-0 bg-black opacity-50"
+          className="fixed z-[1005] inset-0 bg-black opacity-50"
           onClick={toggleDrawer}
         />
       )}

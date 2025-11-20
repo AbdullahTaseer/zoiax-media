@@ -32,12 +32,13 @@ const GlobalModal = ({
       transform: 'translate(-50%, -50%)',
       border: '1px solid lightgray',
       borderRadius: '10px',
-      zIndex: 2000,
+      zIndex: 1100,
       overflow: 'visible', 
     },
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.70)',
-      zIndex: 1900,
+      backdropFilter: "blur(2px)",
+      zIndex: 1090,
       ...overlayStyle,
     },
   };
@@ -53,13 +54,14 @@ const GlobalModal = ({
       ariaHideApp={false}
     >
       {modalHeader && (
-        <div className="p-3 bg-white flex items-center gap-4 justify-between rounded-t-[8px]">
-          <div className="flex items-center gap-4 1sm:gap-2">
-            <h3 className="text-[#1a1d26] text-[20px] max-[900px]:text-[18px] max-[500px]:text-[16px] font-[700] tracking-normal">
+        <div className="py-3 px-5 bg-white flex items-center gap-4 justify-between rounded-t-[8px]">
+          <div/>
+          <div className="flex items-center gap-4">
+            <h3 className="text-[#1a1d26] text-[32px] max-[900px]:text-[18px] max-[500px]:text-[16px] tracking-normal">
               {title}
             </h3>
           </div>
-          <div onClick={onClose} className="border border-[#1a1d26] w-[28px] h-[28px] rounded-md flex items-center justify-center cursor-pointer">
+          <div onClick={onClose} className="flex items-center justify-center cursor-pointer">
             <svg width="14" height="14" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.9062 1.8335L1.53125 14.8654M1.53125 1.8335L12.9062 14.8654" stroke="#1a1d26" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
