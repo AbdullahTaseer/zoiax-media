@@ -5,6 +5,7 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import OrangeShade from "@/assets/svgs/who-it-work-orange-shade.svg";
 import { WhoItWorkData } from '@/lib/MockData';
 import GlobalButton from '../buttons/GlobalButton';
+import TitleCard from '../cards/TitleCard';
 
 type CardProps = {
   title: string;
@@ -33,11 +34,10 @@ const Card = ({ title, desc, icon }: CardProps) => {
 const WhoItWorkSection = () => {
   return (
     <div className="py-16 px-[5%] max-md:px-4 bg-white">
-      <h1 className="text-[50px] max-md:text-4xl font-bold text-center text-[#012641]">
-        How It Works
-      </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <TitleCard title='How It Works' />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {WhoItWorkData.map((item, idx) => (
           <Card
             key={idx}

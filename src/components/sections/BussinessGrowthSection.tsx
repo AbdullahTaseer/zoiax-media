@@ -2,6 +2,7 @@
 import React from "react";
 import { Megaphone, Palette, Users, Globe, Calendar, Star, TrendingUp } from "lucide-react";
 import GlobalButton from "../buttons/GlobalButton";
+import TitleCard from "../cards/TitleCard";
 
 const services = [
   { icon: <Megaphone size={26} color="white" />, title: "Influencer Marketing" },
@@ -17,9 +18,7 @@ const BusinessGrowthSection = () => {
   return (
     <div className="w-full py-16 px-[5%] max-md:px-4">
 
-      <h1 className="text-[50px] max-md:text-4xl font-bold text-center text-[#012641]">
-        Your Business Growth Engine Starts Here
-      </h1>
+      <TitleCard title="Your Business Growth Engine Starts Here"/>
 
       <p className="text-center text-[#012641]/75 mt-3 text-lg max-w-3xl mx-auto">
         Whether you're a new brand or an established business, Zoiax Media is your all-in-one partner for
