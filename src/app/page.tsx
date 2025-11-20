@@ -9,14 +9,18 @@ import WhoItWorkSection from "@/components/sections/WhoItWorkSection";
 import WhatWeDo from "@/components/sections/WhatWeDo";
 import BigInfluenceSection from "@/components/sections/BigInfluenceSection";
 import MarketingChangedSection from "@/components/sections/MarketingChangedSection";
+import ExploreOurNetWork from "@/components/sections/ExploreOurNetWork";
+import HeroSection from "@/components/sections/HeroSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <EmpoweringRestaurents />
+      <HeroSection/>
+      {/* <EmpoweringRestaurents /> */}
       <BussinessGrowthSection />
       <MarketingChangedSection />
       <WhatWeDo />
+      <ExploreOurNetWork/>
       <BigInfluenceSection />
       {/* <ScrollingTabs/> */}
       <WhoItWorkSection />

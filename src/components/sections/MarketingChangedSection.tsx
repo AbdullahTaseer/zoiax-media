@@ -7,7 +7,7 @@ import MarketingImg from "@/assets/pngs/marketing-img.png";
 const MarketingChangedSection = () => {
   return (
     <div>
-       <div className="bg-[#1E58FB] px-[5%] max-md:px-4 py-10 grid sm:grid-cols-2 gap-6 relative">
+       <div className="bg-[#1E58FB] px-[5%] max-md:px-4 py-10 grid sm:grid-cols-2 gap-6 overflow-hidden relative">
         <Image src={MarketingImg} alt="Marketing Image" className="mx-auto h-[560px] mb-6" />
         <div className="text-white my-auto relative z-10">
           <TitleCard title="Marketing Has Changed. Has Your Brand?" className="text-white text-left" />

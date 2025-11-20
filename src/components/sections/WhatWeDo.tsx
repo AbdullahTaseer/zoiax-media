@@ -41,7 +41,7 @@ const whatWeDoData = [
 
 const WhatWeDo = () => {
   return (
-    <div className="px-[5%] max-md:px-4 py-16 text-center">
+    <div className="px-[5%] max-md:px-4 py-16 text-center bg-[#F8FAFB]">
       <TitleCard title="What We Do" />
 
       <div className="grid md:grid-cols-3 gap-8 mt-10">

@@ -34,7 +34,7 @@ const BusinessGrowthSection = () => {
               {item.icon}
             </div>
 
-            <p className="text-[#012641] font-medium">{item.title}</p>
+            <p className="text-[#012641]">{item.title}</p>
           </div>
         ))}
       </div>
@@ -53,7 +53,7 @@ const BusinessGrowthSection = () => {
         ))}
       </div>
 
-      <p className="text-center my-6">We don't just bring traffic — we help you turn attention into real bookings and long-term growth.</p>
+      <p className="text-center font-[300] my-6">We don't just bring traffic — we help you turn attention into <span className="font-[400]">real bookings and long-term growth.</span></p>
 
       <div className="flex items-center max-[500px]:flex-col justify-center gap-4 sm:gap-6">
         <GlobalButton

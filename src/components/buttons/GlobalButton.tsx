@@ -33,7 +33,7 @@ const GlobalButton = ({
   borderColor,
   borderWidth,
   icon,
-  font = "600",
+  font = "400",
   color = "white",
   borderRadius = '12px',
   bgColor = "#012641",
