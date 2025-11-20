@@ -24,7 +24,7 @@ const NavbarDrawer = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-[1000] hidden max-[1024px]:block overflow-clip bg-white h-[70px]">
+      <div className="sticky top-0 z-[1000] hidden max-[1024px]:block overflow-clip bg-white shadow-sm h-[70px]">
         <div className="flex justify-between items-center px-[5%] max-[768px]:px-4 pt-3 bg-white w-full">
           <div className="flex items-center gap-3 max-[350px]:gap-1">
             <svg

@@ -67,7 +67,7 @@ const ReviewsSection = () => {
 
   return (
     <div className="relative grid grid-cols-2 max-[768px]:grid-cols-1 gap-16 max-[1023px]:gap-8 py-12 overflow-hidden px-[5%] max-[768px]:px-4 bg-[#F4F8FB]">
-      <Image src={PurpleShade} alt='img' className='absolute right-0 top-0' />
+      <Image src={PurpleShade} alt='img' className='absolute right-0 bottom-0' />
 
       <div className="relative mt-8 max-[1160px]:mt-0 h-[300px] max-[410px]:h-[350px] overflow-hidden">
         <div
@@ -98,7 +98,7 @@ const ReviewsSection = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center relative z-10 items-center">
         <Image src={CarouselImg} alt="" height={300} width={500} className="max-[768px]:hidden" />
       </div>
 

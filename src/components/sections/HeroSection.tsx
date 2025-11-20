@@ -60,7 +60,7 @@ const HeroSection = () => {
         {[imagesRow1, imagesRow2, imagesRow3].map((row, idx) => (
           <div
             key={idx}
-            className={`flex gap-4 overflow-x-scroll scrollbar-hide relative ${idx === 0 || idx === 2 ? 'pl-10' : ''}`}
+            className={`flex gap-4 rounded-[16px] overflow-x-scroll scrollbar-hide relative ${idx === 0 || idx === 2 ? 'pl-10' : ''}`}
             // style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
           >
             {[...row, ...row].map((img, i) => (
