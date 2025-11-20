@@ -3,8 +3,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import AnimatedButton from "../buttons/AnimatedButton";
 import LogoImg from "@/assets/svgs/Xaioz Media.svg";
+import GlobalButton from "../buttons/GlobalButton";
 
 const Navbar = () => {
   const router = useRouter();
@@ -23,37 +23,40 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-[5%] max-[768px]:px-4 pt-3 bg-white w-full">
         <Image src={LogoImg} alt="" />
 
-        <div className="flex gap-7 items-center whitespace-nowrap text-center text-[#696969] text-[15px] font-medium">
+        <div className="flex gap-7 max-[1100px]:gap-4 items-center whitespace-nowrap text-center text-[#000000] text-[15px]">
           {navItems.map((item) => (
             <div className="relative group" key={item.index}>
               <p
-                className={`cursor-pointer py-1 w-full transition-colors duration-300 ${
-                  activeIndex === item.index ? "text-[#012641] font-semibold" : ""
-                }`}
+                className={`cursor-pointer py-1 w-full transition-colors duration-300 ${activeIndex === item.index ? "text-[#012641]" : ""
+                  }`}
                 onClick={() => setActiveIndex(item.index)}
               >
                 {item.title}
               </p>
               <span
-                className={`absolute left-0 bottom-0 h-[3px] rounded-full transition-all duration-300 ${
-                  activeIndex === item.index
+                className={`absolute left-0 bottom-0 h-[3px] rounded-full transition-all duration-300 ${activeIndex === item.index
                     ? "w-full bg-[#012641]"
                     : "w-0 group-hover:w-full bg-[#012641]"
-                }`}
+                  }`}
               />
             </div>
           ))}
         </div>
 
-        <AnimatedButton
+        <GlobalButton
           onClick={() => router.push("/register")}
           title="Book a Strategy Call"
-          width="180px"
-          height="42px"
-        />
+          bgColor="white" 
+          color="#012641"
+          borderColor="#012641"
+          borderWidth="1px"
+          hover={{ bgColor: "#012641", color: "white" }}
+          className="w-[180px] h-[42px]"
+         />
+
       </div>
 
-        {/* <div className="flex w-full bg-white h-[10px] relative">
+      {/* <div className="flex w-full bg-white h-[10px] relative">
           <div className="absolute left-0 inset-0 w-full bg-white h-[10px]" />
           <div className="nav-first-shadow w-[27%] max-[1300px]:w-[22%]" />
           <div className="nav-second-shadow w-[46%] max-[1300px]:w-[56%]" />

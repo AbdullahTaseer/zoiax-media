@@ -7,7 +7,7 @@ type props = {
 
 const TitleCard = ({ title, className }: props) => {
   return (
-    <p className={`text-[50px] max-md:text-2xl text-center text-[#012641] ${className}`}>
+    <p className={`text-[50px] leading-[60px] max-[1140px]:text-[40px] max-[900px]:text-[36px] max-[1140px]:leading-[47px] text-center text-[#012641] ${className}`}>
       {title}
     </p>
   );

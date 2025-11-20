@@ -25,7 +25,7 @@ const Card = ({ title, desc, icon }: CardProps) => {
       <div className="bg-gradient-to-b from-[#9833DF] to-[#D7287BB2] h-[55px] w-[55px] rounded-full flex justify-center mx-auto items-center mb-4">
         <Image src={icon} alt="" />
       </div>
-      <p className="font-bold text-[24px] text-[#012641]">{title}</p>
+      <p className="font-medium text-[24px] text-[#012641]">{title}</p>
       <p className="text-[#4A4A4A] mt-3">{desc}</p>
     </div>
   );

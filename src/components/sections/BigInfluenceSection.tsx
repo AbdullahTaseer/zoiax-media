@@ -77,7 +77,7 @@ const BigInfluenceSection = () => {
           title="Start My Campaign"
           bgColor="black"
           color="white"
-          className="w-[200px] h-[48px]"
+          className="md:w-[200px] w-[290px] h-[48px]"
         />
 
         <GlobalButton

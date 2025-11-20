@@ -44,11 +44,11 @@ const WhatWeDo = () => {
     <div className="px-[5%] max-md:px-4 py-16 text-center bg-[#F8FAFB]">
       <TitleCard title="What We Do" />
 
-      <div className="grid md:grid-cols-3 gap-8 mt-10">
+      <div className="grid max-[768px]:flex max-[768px]:overflow-x-auto scrollbar-hide grid-cols-3 max-[1024px]:grid-cols-2 gap-8 max-[1200px]:gap-4 mt-10">
         {whatWeDoData.map((item, i) => (
           <div
             key={i}
-            className="rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-white"
+            className="rounded-xl overflow-hidden max-[768px]:w-[320px] shrink-0 border border-gray-200 shadow-sm bg-white"
           >
             <Image
               src={item.img}
@@ -59,7 +59,7 @@ const WhatWeDo = () => {
             />
 
             <div className="p-6 text-left">
-              <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+              <h3 className="text-xl font-medium mb-4">{item.title}</h3>
 
               <ul className="space-y-3">
                 {item.points.map((p, index) => (

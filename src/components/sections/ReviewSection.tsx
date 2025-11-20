@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 import StarRatingCard from "../cards/StarRatingCard";
+import PurpleShade from "@/assets/svgs/purple-gradient.svg";
 
 import CarouselImg from "@/assets/pngs/media-carousel.png";
 
@@ -65,7 +66,8 @@ const ReviewsSection = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 max-[768px]:grid-cols-1 gap-16 max-[1023px]:gap-8 py-12 overflow-hidden px-[5%] max-[768px]:px-4 bg-[#F4F8FB]">
+    <div className="relative grid grid-cols-2 max-[768px]:grid-cols-1 gap-16 max-[1023px]:gap-8 py-12 overflow-hidden px-[5%] max-[768px]:px-4 bg-[#F4F8FB]">
+      <Image src={PurpleShade} alt='img' className='absolute right-0 top-0' />
 
       <div className="relative mt-8 max-[1160px]:mt-0 h-[300px] max-[410px]:h-[350px] overflow-hidden">
         <div

@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import AnimatedButton from "../buttons/AnimatedButton";
 import LogoImg from "@/assets/svgs/Xaioz Media.svg";
+import GlobalButton from "../buttons/GlobalButton";
 
 const NavbarDrawer = () => {
   const router = useRouter();
@@ -24,7 +24,7 @@ const NavbarDrawer = () => {
     <>
       <div className="sticky top-0 z-[9997] hidden max-[1024px]:block">
         <div className="flex justify-between items-center px-[5%] max-[768px]:px-4 pt-3 bg-white w-full">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 max-[350px]:gap-1">
             <svg
               onClick={toggleDrawer}
               className="cursor-pointer"
@@ -38,13 +38,17 @@ const NavbarDrawer = () => {
                 d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"
               />
             </svg>
-            <Image src={LogoImg} alt="" />
+            <Image src={LogoImg} alt="" className="max-[475px]:w-[120px]" />
           </div>
-          <AnimatedButton
+          <GlobalButton
             onClick={() => router.push("/register")}
             title="Book a Strategy Call"
-            width="180px"
-            height="42px"
+            bgColor="white"
+            color="#012641"
+            borderColor="#012641"
+            borderWidth="1px"
+            hover={{ bgColor: "#012641", color: "white" }}
+            className="w-[180px] h-[42px] max-[475px]:w-[140px] max-[350px]:w-[128px]"
           />
         </div>
 
